@@ -1,0 +1,263 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style3
+        {
+            width: 10%;
+        }
+        .style4
+        {
+            width: 80%;
+        }
+        .style5
+        {
+            width 100%;
+            height 10px;
+        }
+        .style6
+        {
+            width: 25%;
+        }
+         .styleoo
+        {
+            height 70%;
+            width: 55%;
+        }
+        .style7
+        {
+            width: 80%;
+            height: 19px;
+        }
+    </style>
+</head>
+<body bgcolor="#eeeff0">
+    <form id="form1" runat="server" style="font-family: tahoma">
+    <div>
+        <table cellpadding="0" cellspacing="0" class="style1">
+            <tr>
+                <td class="style3" rowspan="9">
+                    &nbsp;</td>
+                <td colspan="2" class="style4" align="center">
+                    banner</td>
+                <td rowspan="9" class="style3">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="style7">
+                    <table cellpadding="0" cellspacing="0" class="style1">
+                        <tr>
+                            <td>
+                                <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/img/anasayfa.gif" 
+                                    Width="100%" />
+                            </td>
+                            <td>
+                                <asp:ImageButton ID="ImageButton2" runat="server" 
+                                    ImageUrl="~/img/makaleler.gif" Width="100%" />
+                            </td>
+                            <td>
+                                <asp:ImageButton ID="ImageButton3" runat="server" 
+                                    ImageUrl="~/img/cıckıs_r1_c5.gif" Width="100%" 
+                                    onclick="ImageButton3_Click" />
+                            </td>
+                            <td>
+                                <asp:ImageButton ID="ImageButton4" runat="server" 
+                                    ImageUrl="~/img/uyegirisi.gif" Width="100%" onclick="ImageButton4_Click" />
+                            </td>
+                        </tr>
+                    </table>
+                    </td>
+            </tr>
+            <tr>
+                <td rowspan="6" class="style6" align="left">
+                Görüntülemek üzere konu seçiniz : 
+                    <asp:DataList ID="DataList1" runat="server" BackColor="White" 
+                        BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
+                        GridLines="Vertical">
+                        <AlternatingItemStyle BackColor="#DCDCDC" />
+                        <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                        <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+                        <ItemStyle BackColor="#EEEEEE" ForeColor="Black" />
+                        <ItemTemplate>
+                            <table cellpadding="0" cellspacing="0" class="style1">
+                                <tr>
+                                    <td>
+                                        <a href='konu.aspx?id=<%#Eval ("KonuId") %>' style="color: #000000; text-decoration: none">
+                                                                                   <%#Eval("KonuBaslik")%></a>
+                                </tr>
+                            </table>
+                        </ItemTemplate>
+                        <SelectedItemStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                    </asp:DataList>
+                </td>
+                <td class="style5" align="center">
+            
+                    <asp:Panel ID="Panel1" runat="server">
+                        <table cellpadding="0" cellspacing="0" class="style1">
+                            <tr>
+                                <td>
+                                    Kullanıcı adı</td>
+                                <td>
+                                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Şifre</td>
+                                <td>
+                                    <asp:TextBox ID="sifre" runat="server" 
+                TextMode="Password"></asp:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Button ID="Buttongir" runat="server" 
+                onclick="Buttongir_Click" Text="Gir" />
+                                </td>
+                                <td>
+                                    &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#C9D2D3" colspan="2">
+                                    &nbsp;</td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+               
+                </td>
+            </tr>
+            <tr>
+                <td class="style5" align="center">
+            
+                    <asp:Panel ID="Panel2" runat="server">
+                        <table cellpadding="0" cellspacing="0" class="style1">
+                            <tr>
+                                <td>
+                                    <table cellpadding="0" cellspacing="0" class="style1">
+                                        <tr>
+                                            <td>
+                                                Adınız :</td>
+                                            <td>
+                                                <asp:TextBox ID="TextBoxAdi" runat="server"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Soyadınız :</td>
+                                            <td>
+                                                <asp:TextBox ID="TextBoxSoyadi" runat="server"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Resim :</td>
+                                            <td>
+                                                <asp:FileUpload ID="FileUpload1" runat="server" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Kullanıcı adı :</td>
+                                            <td>
+                                                <asp:TextBox ID="TextBoxKadi" runat="server"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Şifre :</td>
+                                            <td>
+                                                <asp:TextBox ID="TextBoxSifre" runat="server" 
+                            TextMode="Password"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Şifre tekrar :</td>
+                                            <td>
+                                                <asp:TextBox ID="TextBoxSifretekrar" runat="server" 
+                            TextMode="Password"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Kulanıcı statüsü :</td>
+                                            <td>
+                                                <asp:DropDownList ID="DropDownList2" runat="server" 
+                            DataTextField="SttAd">
+                                                </asp:DropDownList>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <asp:Button ID="Button1" runat="server" 
+                            onclick="Button1_Click" Text="kaydet" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td bgcolor="#C9D2D3" colspan="2">
+                                                &nbsp;</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+               
+                </td>
+            </tr>
+            <tr>
+                <td class="style5" align="center" style="background-color: #FFA6A8">
+            
+                    <asp:Label ID="Label1" runat="server"></asp:Label>
+               
+                </td>
+            </tr>
+            <tr>
+                <td class="style5">
+            
+                    Makale başlık
+                    <asp:TextBox ID="başlık" runat="server"></asp:TextBox>
+                       
+                    Makale içerik
+                    <asp:TextBox ID="konu" runat="server"></asp:TextBox>
+                    <asp:Button ID="ButtonBul" runat="server" onclick="ButtonBul_Click" 
+                        Text="Bul" />
+               
+                </td>
+            </tr>
+            <tr>
+                <td class="style5">
+            
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="styleoo">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <p>
+                            &nbsp;</p>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="style4" colspan="2" align="center">
+                    Göster son
+                    <asp:DropDownList ID="DropDownList1" runat="server" 
+                        onselectedindexchanged="DropDownList1_SelectedIndexChanged">
+                    </asp:DropDownList>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

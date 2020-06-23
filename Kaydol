@@ -1,0 +1,69 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="Default2" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <p>
+    <table __designer:mapid="57" cellpadding="0" cellspacing="0" class="style1">
+        <tr __designer:mapid="58">
+            <td __designer:mapid="59">
+                Adınız :</td>
+            <td __designer:mapid="5a">
+                <asp:TextBox ID="TextBoxAdi" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr __designer:mapid="5c">
+            <td __designer:mapid="5d">
+                Soyadınız :</td>
+            <td __designer:mapid="5e">
+                <asp:TextBox ID="TextBoxSoyadi" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr __designer:mapid="60">
+            <td __designer:mapid="61">
+                Resim :</td>
+            <td __designer:mapid="62">
+                <asp:FileUpload ID="FileUpload1" runat="server" />
+            </td>
+        </tr>
+        <tr __designer:mapid="64">
+            <td __designer:mapid="65">
+                Kullanıcı adı :</td>
+            <td __designer:mapid="66">
+                <asp:TextBox ID="TextBoxKadi" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr __designer:mapid="68">
+            <td __designer:mapid="69">
+                Şifre :</td>
+            <td __designer:mapid="6a">
+                <asp:TextBox ID="TextBoxSifre" runat="server" TextMode="Password"></asp:TextBox>
+            </td>
+        </tr>
+        <tr __designer:mapid="6c">
+            <td __designer:mapid="6d">
+                Şifre tekrar :</td>
+            <td __designer:mapid="6e">
+                <asp:TextBox ID="TextBoxSifretekrar" runat="server" TextMode="Password"></asp:TextBox>
+            </td>
+        </tr>
+        <tr __designer:mapid="70">
+            <td __designer:mapid="71">
+                Kulanıcı statüsü :</td>
+            <td __designer:mapid="72">
+                <asp:DropDownList ID="DropDownList1" runat="server" DataTextField="SttAd">
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr __designer:mapid="74">
+            <td __designer:mapid="75" colspan="2">
+                &nbsp;</td>
+        </tr>
+        <tr __designer:mapid="77">
+            <td __designer:mapid="78" colspan="2">
+                &nbsp;</td>
+        </tr>
+    </table>
+</p>
+</asp:Content>
+
